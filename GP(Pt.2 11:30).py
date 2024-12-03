@@ -12,7 +12,7 @@ height = np.array(data['height'])
 def tide_model(t, A, omega, phi, C):
     return A * np.sin(omega * t + phi) + C
 
-initial_guess = [5, 2 * np.pi / 12.42, 0, 0]\
+initial_guess = [5, 2 * np.pi / 12.42, 0, 0]
 
 popt, pcov = curve_fit(tide_model, day, height, p0=initial_guess, sigma=np.full(len(height), 0.25))
 
