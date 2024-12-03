@@ -21,7 +21,6 @@ plt.tight_layout()
 plt.savefig("short_residuals_histogram.pdf")
 plt.show()
 
-# Calculate and print standard deviation and intrinsic scatter
 std_residuals = np.std(residuals)
 intrinsic_scatter = np.sqrt(std_residuals**2 - 0.25**2)
 print(f"Standard Deviation: {std_residuals:.3f} ft\nIntrinsic Scatter: {intrinsic_scatter:.3f} ft")
